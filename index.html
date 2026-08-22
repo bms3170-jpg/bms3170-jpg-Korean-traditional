@@ -1,0 +1,28 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>철원민통선한과 | 전통 한과 예약판매</title><link rel="stylesheet" href="assets/site.css"></head><body>
+
+<header class="site-header"><div class="nav-shell">
+<a class="brand-link" href="index.html">철원민통선<span>한과</span></a>
+<nav class="desktop-nav"><a href="about/">소개</a><a href="products/">상품</a><a href="guide/">이용안내</a><a href="order/">예약주문</a><a href="lookup/">주문조회</a></nav>
+<div class="nav-actions"><a class="btn ghost" href="lookup/">주문조회</a><a class="btn primary" href="order/">예약주문</a></div>
+<button class="menu-button" data-menu-button aria-expanded="false">☰</button></div>
+<nav class="mobile-menu" data-mobile-menu><a href="about/">철원민통선한과 소개</a><a href="products/">상품 안내</a><a href="guide/">배송·픽업·FAQ</a><a href="order/">예약주문</a><a href="lookup/">주문조회</a></nav></header>
+
+<section class="hero"><div class="hero-media"><img src="assets/1.JPG" alt="철원민통선한과 한과 선물세트"></div><div class="hero-content"><p class="eyebrow">CHEORWON · TRADITIONAL HANGWA</p><h1>전통의 맛을<br>정성스럽게 담았습니다.</h1><p class="lead">명절마다 기다려주시는 마음에 보답하도록 한 상자 한 상자 정성껏 준비합니다.</p><div class="hero-actions"><a class="btn gold" href="order/">예약주문</a><a class="btn ghost" href="products/">상품 보기</a><a class="btn ghost" href="lookup/">주문조회</a></div><div class="hero-note">예약판매 · 무통장입금 · 배송/픽업</div></div></section>
+<section class="status-section"><div class="status-card"><span class="status-dot" id="home-status-dot"></span><div class="status-copy"><strong id="home-sale-title">예약판매 일정 확인 중</strong><p id="home-sale-copy">잠시만 기다려 주세요.</p></div><a class="btn primary" href="order/">예약주문 확인</a></div></section>
+<section class="section-shell"><div class="section-head"><p class="eyebrow">OUR PRODUCT</p><h2>눈으로 먼저 만나는 한과</h2><p>선물세트부터 전통 약과와 조청까지 철원민통선한과의 대표 제품을 소개합니다.</p></div><div class="product-grid">
+<article class="card image-card"><img src="assets/2.JPG" alt="한과 구성"><div class="card-body"><h3>전통 한과 선물세트</h3><p>다양한 색과 고소한 풍미를 한 상자에 정갈하게 담았습니다.</p></div></article>
+<article class="card image-card"><img src="assets/3.JPG" alt="전통 수제 약과"><div class="card-body"><h3>전통 수제 약과</h3><p>정성스럽게 만든 달콤한 전통 간식입니다.</p></div></article>
+<article class="card image-card"><img src="assets/4.JPG" alt="찹쌀 조청"><div class="card-body"><h3>찹쌀 조청</h3><p>한과와 잘 어울리는 깊고 은은한 단맛의 조청입니다.</p></div></article></div></section>
+<section class="section-shell"><div class="split-section"><img src="assets/6.JPG" alt="깨 한과"><div class="copy-panel"><p class="eyebrow">TRADITION & CARE</p><h2>오래 기억되는 명절의 맛</h2><p>받는 분이 기분 좋게 드실 수 있도록 제품의 구성과 포장 과정까지 세심하게 준비합니다.</p><ul class="copy-list"><li>명절 예약판매 중심 운영</li><li>배송·픽업 주문 모두 지원</li><li>주문번호로 진행상태 확인</li></ul></div></div></section>
+<section class="section-shell"><div class="section-head"><p class="eyebrow">PACKAGING</p><h2>선물의 마음까지 담는 포장</h2><p>배송 주문은 아래와 같은 전용 포장박스를 사용합니다.</p></div><div class="gallery-grid"><article class="card image-card"><img src="assets/7.JPG"></article><article class="card image-card"><img src="assets/8.JPG"></article><article class="card image-card"><img src="assets/9.JPG"></article></div></section>
+<section class="section-shell"><div class="notice-strip"><strong>예약판매 안내</strong><p id="home-notice">재고 소진 시 예약판매가 조기 종료될 수 있습니다.</p></div></section>
+
+<footer class="site-footer"><div class="footer-grid">
+<div><h3>철원민통선한과</h3><p>정성스럽게 만든 전통 한과를 명절 예약판매로 만나보세요.</p></div>
+<div><strong>바로가기</strong><div class="footer-links"><a href="products/">상품 안내</a><a href="order/">예약주문</a><a href="lookup/">주문조회</a><a href="guide/">이용안내</a></div></div>
+<div><strong>고객 안내</strong><div class="footer-links"><a href="privacy/">개인정보처리방침</a><a href="terms/">이용안내</a></div></div>
+</div><div class="footer-bottom">© 2026 철원민통선한과. All rights reserved.</div></footer>
+<a class="floating-call" data-store-phone href="#">☎ 문의</a>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="assets/site.js"></script>
+<script>(async()=>{if(!window.supabaseConfigured)return;const{data}=await window.supabaseClient.from("store_settings").select("*").eq("id",1).single();if(!data)return;const t=Hangwa.koreaToday(),open=!data.sale_force_closed&&data.sale_start&&data.sale_end&&t>=data.sale_start&&t<=data.sale_end,d=document.querySelector("#home-status-dot");document.querySelector("#home-sale-title").textContent=data.sale_title||"예약판매";if(open){d.classList.add("open");document.querySelector("#home-sale-copy").textContent=`${Hangwa.formatDate(data.sale_start)} ~ ${Hangwa.formatDate(data.sale_end)} · 현재 예약 접수 중`;}else{d.classList.add("closed");document.querySelector("#home-sale-copy").textContent=data.sale_force_closed?(data.sale_closed_reason||"예약판매가 조기 종료되었습니다."):"현재 예약판매 기간이 아닙니다.";}if(data.site_notice)document.querySelector("#home-notice").textContent=data.site_notice;const p=Hangwa.digits(data.phone);document.querySelectorAll("[data-store-phone]").forEach(a=>{a.href=p?`tel:${p}`:"#";a.textContent=data.phone?`☎ ${data.phone}`:"☎ 문의";});})();</script></body></html>
