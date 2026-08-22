@@ -1,15 +1,15 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>개인정보처리방침</title><link rel="stylesheet" href="../assets/site.css"></head><body>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>상품 안내 | 철원민통선한과</title><link rel="stylesheet" href="../assets/site.css"></head><body>
 <header class="site-header"><div class="nav-shell">
 <a class="brand-link" href="../index.html">철원민통선<span>한과</span></a>
 <nav class="desktop-nav"><a href="../about/">소개</a><a href="../products/">상품</a><a href="../guide/">이용안내</a><a href="../order/">예약주문</a><a href="../lookup/">주문조회</a></nav>
 <div class="nav-actions"><a class="btn ghost" href="../lookup/">주문조회</a><a class="btn primary" href="../order/">예약주문</a></div>
 <button class="menu-button" data-menu-button aria-expanded="false">☰</button></div>
 <nav class="mobile-menu" data-mobile-menu><a href="../about/">철원민통선한과 소개</a><a href="../products/">상품 안내</a><a href="../guide/">배송·픽업·FAQ</a><a href="../order/">예약주문</a><a href="../lookup/">주문조회</a></nav></header>
-<main class="page-shell"><section class="page-hero"><h1>개인정보처리방침</h1></section><div class="form-card"><p>주문 처리, 배송, 문의, 취소·환불을 위해 이름, 전화번호, 배송지, 입금자명, 환불 은행·계좌번호·예금주 등을 수집할 수 있습니다.</p><p>실제 공개 전 사업자 정보, 보유기간, 파기방법, 개인정보 담당자 등 법적 고지사항을 실제 정보로 검토·수정하세요.</p></div></main>
+<main class="page-shell"><section class="page-hero"><div class="breadcrumb">홈 / 상품</div><p class="eyebrow">PRODUCTS</p><h1>상품 안내</h1><p class="lead">판매 가능한 상품과 가격은 예약판매 시기에 관리자 설정에 따라 자동으로 반영됩니다.</p></section><div class="product-grid" id="dynamic-products"><article class="card image-card"><img src="../assets/1.JPG"><div class="card-body"><h3>불러오는 중</h3></div></article></div><section class="section-shell"><div class="section-head"><h2>함께 보는 제품</h2></div><div class="product-grid"><article class="card image-card"><img src="../assets/3.JPG"><div class="card-body"><h3>전통 수제 약과</h3></div></article><article class="card image-card"><img src="../assets/4.JPG"><div class="card-body"><h3>찹쌀조청</h3></div></article><article class="card image-card"><img src="../assets/5.JPG"><div class="card-body"><h3>찹쌀도라지조청</h3></div></article></div></section></main>
 <footer class="site-footer"><div class="footer-grid">
 <div><h3>철원민통선한과</h3><p>정성스럽게 만든 전통 한과를 명절 예약판매로 만나보세요.</p></div>
 <div><strong>바로가기</strong><div class="footer-links"><a href="../products/">상품 안내</a><a href="../order/">예약주문</a><a href="../lookup/">주문조회</a><a href="../guide/">이용안내</a></div></div>
 <div><strong>고객 안내</strong><div class="footer-links"><a href="../privacy/">개인정보처리방침</a><a href="../terms/">이용안내</a></div></div>
 </div><div class="footer-bottom">© 2026 철원민통선한과. All rights reserved.</div></footer>
 <a class="floating-call" data-store-phone href="#">☎ 문의</a>
-<script src="../assets/site.js"></script></body></html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="../supabase-config.js"></script><script src="../assets/site.js"></script><script>(async()=>{if(!window.supabaseConfigured)return;const{data}=await window.supabaseClient.from("products").select("*").eq("active",true).order("sort_order");if(!data)return;const b=document.querySelector("#dynamic-products");b.innerHTML="";data.forEach((p,i)=>{const sold=p.stock!==null&&p.stock<=0,e=document.createElement("article");e.className="card image-card";e.innerHTML=`<img src="../assets/${i%2===0?"1.JPG":"2.JPG"}"><div class="card-body"><h3>${p.weight}</h3><p>${Hangwa.formatMoney(p.price)} · ${sold?"품절":"예약 가능"}</p></div>`;b.appendChild(e);});})();</script></body></html>
