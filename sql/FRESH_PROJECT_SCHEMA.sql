@@ -1,0 +1,3 @@
+-- 새 프로젝트에서만 사용
+-- 먼저 기존 프로젝트용 기본 schema를 만들지 않았다면 이 파일 대신 현재 프로젝트의 기존 schema.sql + UPGRADE_EXISTING_PROJECT.sql 순서로 실행하세요.
+-- 현재 사용자는 이미 Supabase 프로젝트가 있으므로 UPGRADE_EXISTING_PROJECT.sql만 실행하면 됩니다.
